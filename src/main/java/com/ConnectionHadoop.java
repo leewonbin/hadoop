@@ -27,6 +27,7 @@ public class ConnectionHadoop {
 				Path logFileName = new Path("word.log");
 				if(fs.exists(upFileName)) {
 					fs.delete(upFileName,true);
+					fs.delete(logFileName,true);
 				}
 				FSDataOutputStream fsdo = fs.create(upFileName);
 				fsdo.writeUTF("hi hi hi hey lol start hi");
