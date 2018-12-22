@@ -24,6 +24,7 @@ public class ConnectionHadoop {
 				FileSystem fs = FileSystem.get(config);
 				
 				Path upFileName = new Path("word.txt");
+				Path logFileName = new Path("word.log");
 				if(fs.exists(upFileName)) {
 					fs.delete(upFileName,true);
 				}
